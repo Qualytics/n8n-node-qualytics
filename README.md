@@ -1,6 +1,6 @@
 # n8n-nodes-qualytics
 
-This is an n8n community node for [Qualytics](https://www.qualytics.io/), a data quality platform. It lets you trigger n8n workflows when Qualytics Flow Actions fire.
+This is an n8n community node for [Qualytics](https://qualytics.ai/), a data quality platform. It lets you trigger n8n workflows when Qualytics Flow Actions fire.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
 
@@ -127,12 +127,12 @@ The Qualytics Trigger node receives the following JSON payload:
       }
     ]
   },
-  "target_link": "https://app.qualytics.io/..."
+  "target_link": "https://demo.qualytics.io/..."
 }
 ```
 
 ## Resources
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
-* [Qualytics documentation](https://docs.qualytics.io/)
-* [Qualytics n8n integration guide](https://docs.qualytics.io/integrations/n8n)
+* [Qualytics documentation](https://userguide.qualytics.io/)
+* [Qualytics n8n integration guide](https://userguide.qualytics.io/integrations/n8n)

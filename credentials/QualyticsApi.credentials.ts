@@ -8,7 +8,7 @@ import type {
 export class QualyticsApi implements ICredentialType {
 	name = 'qualyticsApi';
 	displayName = 'Qualytics API';
-	documentationUrl = 'https://docs.qualytics.io/integrations/n8n';
+	documentationUrl = 'https://userguide.qualytics.io/integrations/n8n';
 	icon: Icon = 'file:../icons/qualytics.svg';
 
 	properties: INodeProperties[] = [
@@ -26,7 +26,7 @@ export class QualyticsApi implements ICredentialType {
 	// We use a simple test that always passes since there's no API endpoint to validate against.
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://www.qualytics.io',
+			baseURL: 'https://qualytics.ai',
 			url: '/',
 			method: 'HEAD',
 			skipSslCertificateValidation: true,

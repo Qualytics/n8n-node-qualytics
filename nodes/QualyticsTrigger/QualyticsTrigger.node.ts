@@ -1,5 +1,6 @@
 import type {
 	IDataObject,
+	IHookFunctions,
 	IWebhookFunctions,
 	IWebhookResponseData,
 	INodeType,
@@ -14,6 +15,7 @@ import { NodeConnectionTypes } from 'n8n-workflow';
  * When a Flow in Qualytics triggers a notification action configured for n8n,
  * it sends a webhook payload to this node, starting the n8n workflow.
  */
+// eslint-disable-next-line @n8n/community-nodes/node-usable-as-tool
 export class QualyticsTrigger implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Qualytics Trigger',
@@ -26,8 +28,6 @@ export class QualyticsTrigger implements INodeType {
 		defaults: {
 			name: 'Qualytics Trigger',
 		},
-		// Trigger nodes are not typically used as AI tools
-		usableAsTool: true,
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [
@@ -85,6 +85,26 @@ export class QualyticsTrigger implements INodeType {
 				description: 'Which events to trigger on',
 			},
 		],
+	};
+
+	webhookMethods = {
+		default: {
+			async checkExists(this: IHookFunctions): Promise<boolean> {
+				// Qualytics webhooks are configured manually via the Qualytics UI.
+				// There is no API to programmatically verify the webhook exists.
+				return false;
+			},
+			async create(this: IHookFunctions): Promise<boolean> {
+				// Qualytics webhooks are configured manually via the Qualytics UI.
+				// n8n displays the webhook URL for the user to register in Qualytics Settings > Integrations.
+				return true;
+			},
+			async delete(this: IHookFunctions): Promise<boolean> {
+				// Qualytics webhooks are configured manually via the Qualytics UI.
+				// Users must manually remove the webhook URL from Qualytics Settings > Integrations.
+				return true;
+			},
+		},
 	};
 
 	async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
