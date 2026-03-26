@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm whoami:*)",
+      "Bash(npm view:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm publish:*)",
+      "Bash(npm run release:*)",
+      "Bash(npx release-it:*)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics remote -v)",
+      "Bash(gh repo view:*)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics status)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics ls-files)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics add package.json package-lock.json)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nFix repository URLs in package.json\n\nUpdate homepage and repository URLs to match actual GitHub remote.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics push)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics remote set-url:*)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics add package.json)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nUpdate repository URLs to new location\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npm version:*)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics add:*)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nAdd automated publish workflow for npm and GitHub Packages\n\nPublishes to both registries when a GitHub release is created.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nUpdate workflow for npm Trusted Publishers\n\n- Add id-token: write permission for OIDC authentication\n- Add --provenance flag for supply chain security\n- Remove NPM_TOKEN requirement \\(uses OIDC instead\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics pull --rebase)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics log --oneline -10)",
+      "Bash(gh run list:*)",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nFix publish workflow trigger and add NPM_CONFIG_PROVENANCE\n\n- Change trigger from ''created'' to ''published''\n- Add explicit NPM_CONFIG_PROVENANCE env var\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nSwitch to NPM_TOKEN authentication for publishing\n\nTrusted Publishers OIDC was failing - use explicit token instead.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/ets/workspace/qualytics/n8n-nodes-qualytics commit -m \"$\\(cat <<''EOF''\nRevert to Trusted Publishers authentication\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
