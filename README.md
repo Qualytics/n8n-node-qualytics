@@ -135,4 +135,4 @@ The Qualytics Trigger node receives the following JSON payload:
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 * [Qualytics documentation](https://userguide.qualytics.io/)
-* [Qualytics n8n integration guide](https://userguide.qualytics.io/integrations/n8n)
+* [Qualytics n8n integration guide](https://userguide.qualytics.io/flows/workflow/#n8n)
